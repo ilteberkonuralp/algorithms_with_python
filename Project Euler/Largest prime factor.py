@@ -48,4 +48,4 @@ print(int(largestprime))
 
 time2=time.time()
 timedif=round(time2-time1,3)
-# print(f"The spend time for calculation is : {timedif}")
+print(f"The spend time for calculation is : {timedif}")
