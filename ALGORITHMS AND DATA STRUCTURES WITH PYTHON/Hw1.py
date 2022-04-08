@@ -43,7 +43,7 @@ def modifyTxt(filename,*args):
                 elif(field=="surname"):
                     k[2]=newValue
                 elif(field=="job"):
-                    k[3]==newValue
+                    k[3]=newValue
                 elif(field=="age"):
                     k[4]=newValue
         with open(filename, 'w') as file:
