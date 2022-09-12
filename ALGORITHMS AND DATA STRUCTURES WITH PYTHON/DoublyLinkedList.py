@@ -71,11 +71,39 @@ class LinkedList:
             newnode.next=currentnode.next
             newnode.prev=currentnode
             currentnode.next=newnode
+    def DeleteBeginningElement(self):
+        if self.head.data is None:
+            return
+        else:
+            startnode=self.head
+            self.head=startnode.next
     
+    def DeleteEndElement(self):
+        if self.head.data is None:
+            return
+        else:
+            lastnode=self.head
+            while lastnode.next.next is not None:
+                lastnode=lastnode.next
+            lastnode.next=None
+
+    def DeleteSpecificItem(self,x):
+        if self.head.data is None:
+            return
+        else:
+            currentnode=self.head
+            while currentnode.next is not None:
+                if currentnode.next.data==x:
+                    break
+                else: 
+                    currentnode=currentnode.next
+            currentnode.next=currentnode.next.next
+            
 MyList=LinkedList()
 MyList.display()
 MyList.AppendEnd(6)
 MyList.display()
+
 MyList.AppendBeginning(1)
 MyList.display()
 MyList.AppendBeginning(2)
@@ -98,3 +126,15 @@ MyList.InsertAfter(2,11)
 MyList.display()
 MyList.InsertAfter(15,12)
 MyList.display()
+MyList.DeleteBeginningElement()
+MyList.display()
+MyList.DeleteEndElement()
+MyList.DeleteEndElement()
+MyList.DeleteEndElement()
+MyList.DeleteEndElement() 
+MyList.display()
+MyList.DeleteSpecificItem(11)
+MyList.DeleteSpecificItem(7)
+MyList.DeleteSpecificItem(6)
+MyList.display()
+
