@@ -1,11 +1,11 @@
-class node:
+class Node:
     def __init__(self,data=None):
         self.data=data
         self.next=None
 
 class LinkedList:
     def __init__(self):
-        self.head=node()
+        self.head=Node()
 
 
     def length(self):
@@ -19,66 +19,66 @@ class LinkedList:
     def display(self):
 
         elements=[]
-        node = self.head
-        while node:
-            elements.append(node.data)
-            node = node.next
+        Node = self.head
+        while Node:
+            elements.append(Node.data)
+            Node = Node.next
 
         print(elements)
 
     def AppendBeginning(self,newdata):
-        newnode =   node(newdata)
-        newnode.next= self.head
-        self.head = newnode
+        newNode =   Node(newdata)
+        newNode.next= self.head
+        self.head = newNode
     def append(self,data):
         if self.head.data is None:
             self.head.data = data
             self.head.next = None
         else:
-            lastnode = self.head
-            while lastnode.next is not None:
-                lastnode = lastnode.next
+            lastNode = self.head
+            while lastNode.next is not None:
+                lastNode = lastNode.next
 
-            lastnode.next = node(data=data)
+            lastNode.next = Node(data=data)
 
     
     def Insertafteranelement(self,x,data):
-        currentnode= self.head
+        currentNode= self.head
 
-        while currentnode.next is not None:
+        while currentNode.next is not None:
 
-            if currentnode.data==x:
+            if currentNode.data==x:
                 break
             else:
-                currentnode=currentnode.next
+                currentNode=currentNode.next
         
-        if currentnode is None:
+        if currentNode is None:
             
-            newnode=node(data)
-            currentnode=newnode
+            newNode=Node(data)
+            currentNode=newNode
         else:
 
-            newnode=node(data)
-            newnode.next=currentnode.next
-            currentnode.next=newnode
+            newNode=Node(data)
+            newNode.next=currentNode.next
+            currentNode.next=newNode
     def Insertbeforeanelement(self,x,data):
-        currentnode= self.head
+        currentNode= self.head
 
-        while currentnode.next is not None:
-            if currentnode.next.data==x:
+        while currentNode.next is not None:
+            if currentNode.next.data==x:
                 break
             else:
-                currentnode=currentnode.next
+                currentNode=currentNode.next
         
-        if currentnode is None:
+        if currentNode is None:
             
-            newnode=node(data)
-            currentnode=newnode
+            newNode=Node(data)
+            currentNode=newNode
         else:
 
-            newnode=node(data)
-            newnode.next=currentnode.next
-            currentnode.next=newnode
+            newNode=Node(data)
+            newNode.next=currentNode.next
+            currentNode.next=newNode
 
     def DeleteBeginning(self):
         if self.head is None:
@@ -89,25 +89,25 @@ class LinkedList:
     def DeleteEnd(self):
         if self.head is None:
             return
-        currentnode=self.head
-        while currentnode.next.next is not None:
+        currentNode=self.head
+        while currentNode.next.next is not None:
             
-            currentnode=currentnode.next
+            currentNode=currentNode.next
         
-        currentnode.next=None
+        currentNode.next=None
     def DeleteItem(self,x):
         if self.head is None:
             return
-        currentnode=self.head
+        currentNode=self.head
 
-        while currentnode.next:
+        while currentNode.next:
 
-            if currentnode.next.data==x:
+            if currentNode.next.data==x:
                 
-                currentnode.next=currentnode.next.next
+                currentNode.next=currentNode.next.next
                 break
             else:
-                currentnode=currentnode.next
+                currentNode=currentNode.next
 
 my_list=LinkedList()
 
