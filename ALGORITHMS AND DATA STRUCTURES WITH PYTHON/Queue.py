@@ -128,4 +128,4 @@ def CollectionsImplementations():
     print(newqueue)
     print("Get length of queue.")
     print(newqueue.__len__())
-CollectionsImplementations()
+# CollectionsImplementations()
