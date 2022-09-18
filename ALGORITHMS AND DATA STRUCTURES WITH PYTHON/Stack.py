@@ -1,18 +1,3 @@
-# Stack Implementation with Linkedlist
-
- 
-class Stack:
-    def push(self,x):
-        pass
-    def pop(self,x):
-        pass
-    def top(self,x):
-        pass
-    def is_empty(self,x):
-        pass
-    def len(self):
-        pass
-
 # Stack Implementation with List
 def StackListImplementation():
     """An empty list was first created at first, than push,pop and other operation was made. """
