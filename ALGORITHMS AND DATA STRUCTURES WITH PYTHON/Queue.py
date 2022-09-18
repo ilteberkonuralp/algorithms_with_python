@@ -1,9 +1,5 @@
 # Queue Implementation with List
 
-from hashlib import new
-from math import fabs
-from operator import ne
-
 
 def QueueListImplementation():
     """An empty list was first created at first, than enqueue,dequeue and other operation was made. """
